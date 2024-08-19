@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/css/home_page.css">
+</head>
+
+<body class="container">
+
+    <div class="block">
+
+        <nav>
+            <button id="live">Home</button>
+          
+
+            <form action="{% url 'log_out' %}" method="POST">
+                {% csrf_token %}
+                <button >
+                    Log Out
+                </button>
+            </form>
+
+        </nav>
+
+        <main>
+            <div class="work_block">
+                <div class="buttons">
+                    <div>
+                        <button class="check_button" id="all_posts" onclick="glow_button('all_posts')">All Tasks</button>
+                        <button class="check_button" id="in_tasks" onclick="glow_button('in_tasks')">Incomplete Tasks</button>
+                        <button class="check_button" id="c_tasks" onclick="glow_button('c_tasks')">Completed Tasks</button>
+                        <button class="check_button" id="h_tasks" onclick="glow_button('h_tasks')">High Priority Tasks</button>
+                    </div>
+                    <div>
+                        <button id="side_button" onclick="show_add_task()">+ Add Task</button>
+                    </div>
+                </div>
+                <div id="tasks_display" class="tasks_display">
+                    
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer id="popup_div">
+        <div class="show_add_task" id="show_add_task">
+            <form class="form" action="{% url 'add_task' %}" method="post">
+                {% csrf_token %}
+                <div class="working_block">
+                    <div>
+                        <label for="task">Task Title:</label>
+                        <input type="text" id="task" name="task" required>
+                    </div>
+                    <div>
+                        <label for="description">Description:</label>
+                        <textarea name="info" cols="30" rows="5" id="description" required></textarea>
+                    </div>
+                    <div>
+                        <label for="due_date">Due Date & Time:</label>
+                        <input type="datetime-local" id="due_date" name="due_date" required>
+                    </div>
+                    <div>
+                        <label for="priority">Priority:</label>
+
+                        <select name="priority" id="priority" required>
+
+                            <option value="" selected disabled>select priority</option>
+
+                            <option value="Low">
+                                Low
+                            </option>
+
+                            <option value="Medium">
+                                Medium
+                            </option>
+
+                            <option value="High">
+                                High
+                            </option>
+                        </select>
+
+
+
+
+                    </div>
+                    <div style="display: none;">
+                        <label for="status">Status:</label>
+                        <input type="text" placeholder="Progress Level" id="status" name="status" value="False" required>
+                    </div>
+                    <button type="submit" id="task_submit">Submit</button>
+                    <div class="close">
+                        <button type="button" onclick="closeDiv()"><u>Close</u></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </footer>
+
+
+
+
+    <div class="pop" id="pop">
+        <div class="show_add_task" id="show_edit_task">
+            <form class="form" action="{% url 'update_task' %}" method="post">
+                {% csrf_token %}
+                
+                <div class="transfer">
+
+
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <script src="/static/js/home_page.js"></script>
+</body>
+</html>

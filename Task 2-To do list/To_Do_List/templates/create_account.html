@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/static/css/create_account.css">
+</head>
+
+<body class="container">
+
+    <div class="back">
+
+        <img src="/static/img/background.jpg" alt="" id="bg_img">
+
+    </div>
+
+    <main>
+
+        <div class="block">
+
+
+           
+
+            <div class="login-main">
+
+
+               
+                <form action="{% url 'otp_verification' %}" method="post">
+                    {% csrf_token %}
+                   
+                    <div class="login">
+
+                            <center>
+                                <h1>
+                                    Create Account
+                                </h1>
+                            </center>
+
+
+                            <div class="name">
+
+
+                                <label for="">
+                                    Name :
+                                </label>
+
+                                <input type="text" name="first_name" id="first_name" placeholder="First Name" required>
+                                <input type="text" name="last_name" id="last_name" placeholder="Last Name" required>
+
+                            </div>
+
+
+                            <div class="user">
+
+                                <label for="">
+                                    Username :
+                                </label>
+
+                                
+
+                                <input type="text" name="username" id="username" required>
+
+                                <label for="">
+                                    Password :
+                                </label>
+
+                                <br>
+
+                                <input type="password" name="password" id="password" required>
+                           
+                            
+                            </div>
+
+
+                            
+
+                            <div class="email">
+
+                                <label for="">
+                                    E-Mail :
+                                </label>
+
+                                <input type="email" name="email" id="email" placeholder="abc123@gmail.com" required>
+
+
+                            </div>
+
+
+                            <div id="submit">
+
+                            <button type="button" id="sub_button" onclick="sending_otp()">
+                                Submit
+                            </button>
+
+
+
+                            <div id="otp_verify">
+
+                                <div class="otp_verify_sub">
+
+                                    <label for="">
+                                        Verification Code :
+                                    </label>
+
+                                    <input type="text" name="v_code" id="vcode" placeholder="Enter Your Code" required>
+
+                                    <button type="submit">
+                                        Verify
+                                    </button>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+                            <label for="">
+                                Already Have An Account ! <a href="login" style="color: rgb(228, 202, 9);">
+                                    Log in
+                                </a>
+                            </label>
+
+
+                            </div>
+
+                            
+
+                    </div>
+
+
+                        
+
+
+                </form>
+
+            </div>
+            
+
+        </div>
+    </main>
+
+
+
+
+</body>
+
+<script src="/static/js/create_account.js">
+
+</script>
+</html>

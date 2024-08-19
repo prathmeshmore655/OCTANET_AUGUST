@@ -1,0 +1,238 @@
+
+.container {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    width: 100%;
+    height: 90%;
+    background-color: aliceblue;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+    background-color: rgb(22, 42, 49);
+    height: 10%;
+    border-bottom: 2px solid white;
+}
+
+#live {
+    border-bottom: 2px solid white;
+}
+
+nav button {
+    background-color: transparent;
+    border: transparent;
+    font-size: large;
+    color: whitesmoke;
+    margin-right: 10px;
+    transition: 100ms;
+}
+
+nav button:hover {
+    transition: 100ms;
+    border-bottom: 2px solid white;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.work_block {
+    width: 1100px;
+    height: 500px;
+    background-color: white;
+    margin: 35px;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.2);
+    padding: 30px;
+    overflow-y: scroll;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#side_button {
+    font-size: medium;
+    padding: 10px;
+    background-color: rgb(22, 42, 49);
+    color: white;
+    border-radius: 10px;
+    transition: 100ms;
+}
+
+.check_button {
+    font-size: medium;
+    padding: 10px;
+    margin: 10px;
+    background-color: transparent;
+    border: transparent;
+    transition: 100ms;
+}
+
+footer {
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(47, 42, 42);
+}
+
+.show_add_task {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.working_block {
+    height: 500px;
+    width: 500px;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.working_block label {
+    font-size: large;
+}
+
+.working_block input {
+    background-color: transparent;
+    border: transparent;
+    border-bottom: 1px solid black;
+    width: 60%;
+}
+
+.working_block div {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#description {
+    resize: none;
+}
+
+#task_submit {
+    font-size: large;
+    padding: 7px;
+    margin: 10px;
+}
+
+.close {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.close button {
+    background-color: transparent;
+    border: transparent;
+    color: blue;
+}
+
+.tasks_display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px; 
+}
+
+.task-card {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: aliceblue;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+    margin-bottom: 10px; 
+}
+
+
+
+.title {
+    font-family: 'Merriweather', serif;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.description {    
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+}
+
+.time {
+    font-family: 'Merriweather', serif;
+    font-weight: 500;
+    font-size: large;
+}
+
+.priority {
+    font-family: 'Merriweather', serif;
+    font-weight: 500;
+    font-size: large;
+}
+
+.buttons_side {
+    font-size: larger;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(22, 42, 49);
+    color: white;
+    border-radius: 10px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.centre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+}
+
+
+.pop{
+    display: none;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(47, 42, 42);
+}

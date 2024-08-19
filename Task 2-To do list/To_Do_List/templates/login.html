@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body class="container">
+
+    <div class="back">
+
+        <img src="/static/img/background.jpg" alt="" id="bg_img">
+
+    </div>
+
+    <main>
+
+        <div class="block">
+
+
+           
+
+            <div class="login-main">
+
+
+               
+                <form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+
+                    <span style="background-color: white;color: black;width: 100%;">
+                        {{ message }}
+                    </span>
+
+
+                    
+                    <div class="login">
+
+
+
+
+                            <center>
+                                <h1>
+                                Log In
+                                </h1>
+                            </center>
+
+
+                        <label for="">
+                            Username :
+                        </label>
+
+                        <input type="text" name="username" id="username" required>
+
+
+                        <label for="">
+                            Password :
+                        </label>
+
+                        <div style="width: 100%;display: flex;border-bottom: 2px solid whitesmoke;margin-bottom: 20px;">
+                        <input type="password" name="password" id="password" required>
+                        <button type="button" id="eye_icon" onclick="show_password()">
+                            👁️
+                        </button>
+                        </div>
+
+                        <br>
+
+                        <label for="">
+                            Not Having An Account !
+                            <a href="create_account" style="color: rgb(228, 202, 9);">
+                                Create One
+                            </a>
+                            </label>
+
+                            <br>
+
+                            <button type="submit" id="submit">
+                                Submit
+                            </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <div class="quote">
+
+                <label for="" id="title">
+                    Your Daily Success Planner.
+                </label>
+
+                <label for="" id="quote">
+                    Each day is a treasure chest filled with limitless opportunities; take joy in checking many off your list.
+                </label>
+
+
+            </div>
+
+
+        </div>
+    </main>
+
+
+</body>
+
+<script src="/static/js/index.js">
+
+</script>
+</html>

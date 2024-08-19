@@ -1,0 +1,192 @@
+.container{
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+
+}
+
+.back{
+
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+
+#bg_img{
+    height: 100vh;
+    width: 100vw;
+    filter: brightness(60%);
+}
+
+main{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.block{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.quote{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 40%;
+    width: 30%;
+    gap: 3em;
+}
+
+#title{
+    font-size: 2.8em;
+    font-weight: 700;   
+    font-family: 'Merriweather', serif;
+
+}
+
+#quote{
+    font-size:  larger;
+    color: rgb(174, 170, 170);
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 120vh;
+    height: fit-content;
+    background-color: rgba(154, 148, 148, 0.5);
+    padding: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+h1{
+    font-family: 'Merriweather', serif;
+
+}
+
+#username{
+    border-bottom: 2px solid whitesmoke;
+    margin-bottom: 20px;
+}
+
+#submit{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#submit button{
+    padding: 10px;
+    font-size: medium;
+    width: 10%;
+    margin-top: 20px;
+}
+
+.login label{
+    font-size: large;
+}
+
+#password{
+    width: 90%;
+}
+
+#eye_icon{
+    background-color: transparent;
+    border: transparent;
+}
+
+input{
+    background-color: transparent;
+    border: transparent;
+    padding: 10px;
+    border-bottom: 2px solid white;
+    width: 60%;
+    font-size: large;
+    color: whitesmoke;
+}
+
+
+
+.name{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.name input{
+    width: 30%;
+}
+
+.name label{
+    font-size: x-large;
+}
+
+.email{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.email input{
+    width: 57%;
+}
+
+.email label{
+    font-size: x-large;
+}
+
+
+
+.otp_verify_sub{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 120%;
+    margin-top: 20px;
+}
+
+.otp_verify_sub input{
+    width: 35%;
+}
+.otp_verify_sub label{
+    font-size: x-large;  
+}
+
+
+#otp_verify{
+    display: none;
+}
+
+.user{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.user label{
+    font-size: x-large;  
+}
+
+.user input{
+    width: 25%;
+}
+
+
+#password{
+    width: 25%;
+}
+
+
